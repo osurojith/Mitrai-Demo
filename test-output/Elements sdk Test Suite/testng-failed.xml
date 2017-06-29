@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Elements sdk Test Suite]" parallel="classes">
+  <parameter name="mobilePlatformVer" value="9.3"/>
+  <parameter name="mobile" value="off"/>
+  <parameter name="appiumDriver" value="iOS"/>
+  <parameter name="runEnv" value="travis"/>
+  <parameter name="platform" value="OS X 10.11"/>
+  <parameter name="desktop" value="on"/>
+  <parameter name="sauceBrowser" value="chrome"/>
+  <parameter name="mobBrowser" value="safari"/>
+  <parameter name="mobDeviceName" value="iPhone 6 Plus"/>
+  <parameter name="travis" value="off"/>
+  <parameter name="localBrowser" value="chrome"/>
+  <parameter name="sauceBrowserVer" value="54.0"/>
+  <parameter name="appiumVer" value="1.6.0"/>
+  <test name="ElementsTests(failed)" parallel="classes">
+    <classes>
+      <class name="test.Myu">
+        <methods>
+          <include name="setUp"/>
+          <include name="readConfig"/>
+          <include name="tearDown"/>
+          <include name="aaa"/>
+        </methods>
+      </class> <!-- test.Myu -->
+    </classes>
+  </test> <!-- ElementsTests(failed) -->
+</suite> <!-- Failed suite [Elements sdk Test Suite] -->
