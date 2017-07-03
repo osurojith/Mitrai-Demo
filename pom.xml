@@ -3,8 +3,8 @@
   <groupId>com.osura.test-platform</groupId>
   <artifactId>osura-test-platform</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>kryguru-test-platform</name>
-  <description>KryGuru-Test-Platform</description>
+  <name>osura-test-platform</name>
+  <description>Osura-Test-Platform</description>
   <dependencies>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>

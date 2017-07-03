@@ -44,11 +44,12 @@ public class ToolsDemoTest extends BaseClass {
 	public void loginTest() throws Exception {
 		//start of login test
 		commonUtils.takeSnapShot("LoginSuccess.png") ;
-		String userName = simpleExcelReaderExample.getStrValue("Login_credentials.xlsx",1, "UserName");
-		String passWord = simpleExcelReaderExample.getStrValue("Login_credentials.xlsx",1, "Password");
+		String userName = excelReader.getStrValue("Login_credentials.xlsx",1, "UserName");
+		String passWord = excelReader.getStrValue("Login_credentials.xlsx",1, "Password");
 		commonUtils.sendKeys(loginPgObj.userName_txt,userName );
 		commonUtils.sendKeys(loginPgObj.password_txt,passWord );
 		commonUtils.click(loginPgObj.login_btn);
+		Thread.sleep(5000);
 		commonUtils.assertValue(commonUtils.getCurrentUrl(), "http://store.demoqa.com/products-page/your-account/?login=1",
 				"Enterd Credentials are Wrong");
 		
@@ -57,36 +58,6 @@ public class ToolsDemoTest extends BaseClass {
 
 	}
 
-		
-	
-		//switch to window
-		public void switchToWindow(){
-    	// Store the current window handle
-    	String winHandleBefore = driver.getWindowHandle();
-
-    	
-    	for(String winHandle : driver.getWindowHandles()){
-    	    driver.switchTo().window(winHandle);
-    	}
-    	//File uploard
-    	WebElement fileInput = driver.findElement(By.id("file"));
-    	WebElement uploard = driver.findElement(By.id("done"));
-    	String path = (String) prop.get("dataFile");
-    	log.info(prop.get("dataFile").toString());
-    	File file = new File(path);
-    	String absolutePath = file.getAbsolutePath();
-		fileInput.sendKeys(absolutePath);
-		try {
-			Thread.sleep(9000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		uploard.click();
-    	driver.close();
-    	driver.switchTo().window(winHandleBefore);
-
-    }
 
 	@BeforeMethod(alwaysRun = true)
 	private void beforeMethod(Method method) {

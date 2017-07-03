@@ -17,11 +17,11 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
  
 
-public class SimpleExcelReaderExample {
+public class ExcelReader {
 
 	public static String FILEPATH  = null;
-	final static Logger log = Logger.getLogger(SimpleExcelReaderExample.class.getName());
-	public SimpleExcelReaderExample(String FILEPATH){
+	final static Logger log = Logger.getLogger(ExcelReader.class.getName());
+	public ExcelReader(String FILEPATH){
 		this.FILEPATH = FILEPATH;
 		log.info("Test data folder path:"+FILEPATH);
 	}

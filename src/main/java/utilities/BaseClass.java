@@ -28,7 +28,7 @@ public class BaseClass {
 	public static long WAITTIME;
 	public LoginPgObj loginPgObj;
 	
-	public SimpleExcelReaderExample simpleExcelReaderExample;
+	public ExcelReader excelReader;
 	final static Logger log = Logger.getLogger(BaseClass.class.getName());
 	public static String localBrowser = "";
 
@@ -69,7 +69,7 @@ public class BaseClass {
 			prop.load(input);
 			localBrowser = prop.getProperty("localBrowser");
 			WAITTIME = Long.parseLong(prop.getProperty("threadSleep"));
-			simpleExcelReaderExample = new SimpleExcelReaderExample(prop.getProperty(Params.EXCEL_FILE_PATH));
+			excelReader = new ExcelReader(prop.getProperty(Params.EXCEL_FILE_PATH));
 			log.info(localBrowser + "is the local browser selected to run the test");
 		} catch (IOException ex) {
 			ex.printStackTrace();

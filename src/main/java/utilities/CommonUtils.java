@@ -18,7 +18,7 @@ public class CommonUtils {
 	WebElement webElement;
 	Actions action;
 	JavascriptExecutor js = null;
-	boolean elementVisible = false, isForValue = false, isAriaDescByContains = false;
+	boolean elementVisible = false;
 	List<WebElement> listWebElements;
 	LogEntries browserLogs;
 
