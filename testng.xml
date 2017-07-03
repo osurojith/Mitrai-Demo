@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="KryGuru Test Suite" parallel="classes">
+<suite name="MitraiDemoSuite" parallel="classes">
 
-    <test name="KryGuru Test">
+    <test name="MitraiDemo Test">
    <packages>
             <package name="test"/>
    </packages>

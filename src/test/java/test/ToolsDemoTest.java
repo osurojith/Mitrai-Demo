@@ -49,9 +49,13 @@ public class ToolsDemoTest extends BaseClass {
 		commonUtils.sendKeys(loginPgObj.userName_txt,userName );
 		commonUtils.sendKeys(loginPgObj.password_txt,passWord );
 		commonUtils.click(loginPgObj.login_btn);
-		Thread.sleep(5000);
-		commonUtils.assertValue(commonUtils.getCurrentUrl(), "http://store.demoqa.com/products-page/your-account/?login=1",
-				"Enterd Credentials are Wrong");
+		Thread.sleep(20000);
+		if(commonUtils.assertValue(commonUtils.getCurrentUrl(), "http://store.demoqa.com/products-page/your-account/?login=1",
+				"Enterd Credentials are Wrong")){
+			System.out.println("Test Passed");
+		}else{
+			System.out.println("Test Failed");
+		}
 		
 			commonUtils.takeSnapShot("LoginSuccess.png") ;
 		
